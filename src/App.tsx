@@ -1,11 +1,17 @@
-import CategoryPage from "./pages/CategoryPage"
-import Header from "./components/Header"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import CategoryPage from "./pages/CategoryPage";
+import Layout from "./layout/Layout";
 
 export default function App() {
   return (
-    <div className="app-container">
-      <Header />
-      <CategoryPage/>
-    </div>
-  )
+    <Router>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/category" element={<CategoryPage />} />
+        </Route>
+      </Routes>
+    </Router>
+  );
 }
