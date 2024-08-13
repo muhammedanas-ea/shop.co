@@ -1,0 +1,30 @@
+@import url(https://db.onlinewebfonts.com/c/2bf16335573007d828f4197c2b884c04?family=Satoshi);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Satoshi";
+}
+
+@layer utilities {
+  .app-container {
+    padding: 0px 20px; /* Default padding */
+  }
+
+  /* Medium screens (tablets, 768px and up) */
+  @media (min-width: 768px) {
+    .app-container {
+      padding: 0px 40px;
+    }
+  }
+
+  /* Large screens (desktops, 1024px and up) */
+  @media (min-width: 1024px) {
+    .app-container {
+      padding: 0px 100px;
+    }
+  }
+}
