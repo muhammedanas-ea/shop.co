@@ -75,8 +75,8 @@ const CategoryPage = () => {
       <Breadcrumb items={breadcrumbItems} />
       <div className="flex gap-5 py-2">
         <div
-          className={`lg:w-1/4 w-full bg-white lg:block rounded-[20px] border fixed lg:static top-0 left-0 h-full z-50 lg:z-auto transform ${
-            open ? "translate-x-0 overflow-y-scroll" : "-translate-x-full"
+          className={`lg:w-1/4 w-full bg-white lg:block rounded-[20px] overflow-y-scroll border fixed lg:static top-0 left-0 h-full z-50 lg:z-auto transform ${
+            open ? "translate-x-0" : "-translate-x-full"
           } lg:transform-none transition-transform duration-300 ease-in-out`}
         >
           <Filter open={open} setOpen={setOpen} />
