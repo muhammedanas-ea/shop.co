@@ -1,4 +1,4 @@
-import Filter from "../components/categoryComponents/filter/Filter";
+import Filter from "../components/category/filter/Filter";
 import Breadcrumb from "../components/common/breadcrumbs/Breadcrumb";
 import ProductCard from "../components/common/productcard/ProductCard";
 import { BsFilter } from "react-icons/bs";
