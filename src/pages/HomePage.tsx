@@ -4,10 +4,10 @@ import icon from "../assets/heroImag/Vector-removebg-preview.png"
 const HomePage = () => {
   return (
     <>
-    <section className="bg-[#F2F0F1] lg:h-[84vh]">
+    <section className="bg-[#F2F0F1] lg:h-[83vh]">
       <div className="app-container flex flex-col md:items-center lg:flex-row gap-5 ">
-        <div className="max-w-lg flex flex-col justify-center md:text-center lg:text-start mt-10 ">
-          <h1 className="font-bold text-4xl md:text-6xl">
+        <div className="max-w-xl flex flex-col justify-center md:text-center lg:text-start mt-10 ">
+          <h1 className="font-bold text-4xl md:text-6xl sub-font">
             FIND CLOTHES THAT MATCHES YOUR STYLE
           </h1>
           <p className="md:text-base text-sm mt-3 mb-5">
@@ -40,7 +40,7 @@ const HomePage = () => {
           </div>
         </div>
         <div className="lg:mt-10 ">
-          <div className="lg:ml-24 relative">
+          <div className="lg:ml-20 relative">
             <img src={heroImg} alt="" />
             <div className="absolute top-0 w-16 h-16 md:w-28 md:h-28 right-0">
               <img className="w-full h-full object-cover" src={icon} alt="" />
