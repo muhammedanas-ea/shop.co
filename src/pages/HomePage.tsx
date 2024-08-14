@@ -3,7 +3,8 @@ import icon from "../assets/heroImag/Vector-removebg-preview.png"
 
 const HomePage = () => {
   return (
-    <section className="bg-[#F2F0F1] lg:h-screen">
+    <>
+    <section className="bg-[#F2F0F1] lg:h-[84vh]">
       <div className="app-container flex flex-col md:items-center lg:flex-row gap-5 ">
         <div className="max-w-lg flex flex-col justify-center md:text-center lg:text-start mt-10 ">
           <h1 className="font-bold text-4xl md:text-6xl">
@@ -17,7 +18,7 @@ const HomePage = () => {
           <button className="w-full lg:w-52 rounded-[62px] py-4 bg-black text-white text-base">
             Shop Now
           </button>
-          <div className="mt-8 grid grid-cols-2 md:grid-cols-3 text-center gap-5">
+          <div className="mt-8 grid grid-cols-2 lg:grid-cols-3 text-center gap-5">
             <div>
               <h1 className="font-bold text-2xl md:text-4xl">200+</h1>
               <h1 className="text-xs md:text-base text-[#0000008a]">
@@ -30,7 +31,7 @@ const HomePage = () => {
                 High-Quality Products
               </h1>
             </div>
-            <div className="col-span-2 md:col-span-1">
+            <div className="col-span-2 lg:col-span-1">
               <h1 className="font-bold text-2xl md:text-4xl">30,000+</h1>
               <h1 className="text-xs md:text-base text-[#0000008a]">
                 Happy Customers
@@ -51,6 +52,10 @@ const HomePage = () => {
         </div>
       </div>
     </section>
+    <section>
+      aaaaaaaaaaaaaaaa
+    </section>
+    </>
   );
 };
 
