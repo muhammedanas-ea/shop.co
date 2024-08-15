@@ -72,7 +72,7 @@ const HomePage = () => {
         <ProductList title="New Arrivals" products={products} />
         <ProductList title="Top Selling" products={products} />
         <div className="bg-[#fff] rounded-[40px] py-8">
-          <h1 className="font-bold text-[32px] md:text-5xl sub-font text-center px-3">
+          <h1 className="font-bold text-[32px] md:text-5xl sub-font max-w-md">
             BROWSE BY DRESS STYLE
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 rounded-[20px] pt-10">
