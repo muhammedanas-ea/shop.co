@@ -31,4 +31,7 @@
       padding: 0px 100px;
     }
   }
+  .scroll::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
 }

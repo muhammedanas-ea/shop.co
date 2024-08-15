@@ -11,6 +11,7 @@ import product3 from "../assets/productImg/image 8.png";
 import product4 from "../assets/productImg/image 9.png";
 import ReviewCard from "../components/common/reviewCard/ReviewCard";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
+import { useState } from "react";
 
 const products = [
   {
@@ -40,6 +41,30 @@ const products = [
 ];
 
 const HomePage = () => {
+  const [scroll, setScroll] = useState<number>(0);
+  const handleMoveLeft = () => {
+    const container = document.getElementById("reviewScroll");
+    if (container) {
+      const newScrollPosition = scroll - container.offsetWidth * 0.4;
+      setScroll(newScrollPosition);
+      container.scrollTo({
+        left: newScrollPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const handleMoveRight = () => {
+    const container = document.getElementById("reviewScroll");
+    if (container) {
+      const newScrollPosition = scroll + container.offsetWidth * 0.4;
+      setScroll(newScrollPosition);
+      container.scrollTo({
+        left: newScrollPosition,
+        behavior: "smooth",
+      });
+    }
+  };
   return (
     <section>
       <Hero />
@@ -62,11 +87,14 @@ const HomePage = () => {
             OUR HAPPY CUSTOMERS
           </h1>
           <div className="flex items-center gap-4">
-            <FaArrowLeft size={22} />
-            <FaArrowRight size={22} />
+            <FaArrowLeft size={22} onClick={handleMoveLeft} />
+            <FaArrowRight size={22} onClick={handleMoveRight} />
           </div>
         </div>
-        <div className="flex gap-5 overflow-x-scroll max-w-[100vw] mb-36">
+        <div
+          id="reviewScroll"
+          className="flex gap-5 overflow-x-scroll max-w-[100vw] mb-36 scroll"
+        >
           <ReviewCard />
           <ReviewCard />
           <ReviewCard />
