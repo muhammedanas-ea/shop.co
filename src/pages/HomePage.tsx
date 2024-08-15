@@ -62,8 +62,8 @@ const HomePage = () => {
             OUR HAPPY CUSTOMERS
           </h1>
           <div className="flex items-center gap-4">
-            <FaArrowLeft size={24} />
-            <FaArrowRight size={24} />
+            <FaArrowLeft size={22} />
+            <FaArrowRight size={22} />
           </div>
         </div>
         <div className="flex gap-5 overflow-x-scroll max-w-[100vw] mb-36">
