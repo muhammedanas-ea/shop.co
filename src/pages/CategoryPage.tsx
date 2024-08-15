@@ -72,7 +72,7 @@ const CategoryPage = () => {
   const [open, setOpen] = useState<boolean>(false);
 
   return (
-    <section className="app-container">
+    <section className="app-container mb-36">
       <Breadcrumb items={breadcrumbItems} />
       <div className="flex gap-5 py-2">
         <div
