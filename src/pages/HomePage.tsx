@@ -52,8 +52,8 @@ const HomePage = () => {
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 rounded-[20px] pt-10">
             <DressCard src={dress1} title="Casual" />
-            <DressCard src={dress2} title="Formal" spanCols={2} />
-            <DressCard src={dress3} title="Party" spanCols={2} />
+            <DressCard src={dress2} title="Formal" className="col-span-2" />
+            <DressCard src={dress3} title="Party" className="col-span-2" />
             <DressCard src={dress4} title="Gym" />
           </div>
         </div>
@@ -66,7 +66,7 @@ const HomePage = () => {
             <FaArrowRight size={24} />
           </div>
         </div>
-        <div className="flex gap-5 overflow-x-scroll max-w-[100vw]">
+        <div className="flex gap-5 overflow-x-scroll max-w-[100vw] mb-36">
           <ReviewCard />
           <ReviewCard />
           <ReviewCard />

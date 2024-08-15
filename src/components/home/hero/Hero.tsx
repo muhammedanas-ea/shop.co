@@ -3,7 +3,7 @@ import icon from "../../../assets/heroImag/Vector-removebg-preview.png";
 
 const Hero = () => {
   return (
-    <section className="bg-[#F2F0F1] md:h-screen">
+    <section className="bg-[#F2F0F1] lg:h-screen">
       <div className="app-container flex flex-col md:items-center lg:flex-row gap-5 ">
         <div className="max-w-xl flex flex-col justify-center md:text-center lg:text-start mt-10 ">
           <h1 className="font-bold text-4xl md:text-6xl sub-font">

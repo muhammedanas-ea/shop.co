@@ -1,8 +1,8 @@
 import { dressCardProps } from "./types";
 
-const DressCard = ({ src, title, spanCols = 1 }:dressCardProps) => {
+const DressCard = ({ src, title, className}:dressCardProps) => {
   return (
-    <div className={`md:col-span-${spanCols}`}>
+    <div className={className}>
       <div className="h-48 lg:h-64 relative">
         <img
           className="w-full h-full object-cover rounded-[20px]"
