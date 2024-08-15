@@ -71,7 +71,7 @@ const HomePage = () => {
       <div className="app-container">
         <ProductList title="New Arrivals" products={products} />
         <ProductList title="Top Selling" products={products} />
-        <div className="bg-[#F0F0F0] rounded-[40px] py-8 px-4 md:px-14">
+        <div className="bg-[#fff] rounded-[40px] py-8">
           <h1 className="font-bold text-[32px] md:text-5xl sub-font text-center px-3">
             BROWSE BY DRESS STYLE
           </h1>
