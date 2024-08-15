@@ -71,14 +71,14 @@ const HomePage = () => {
       <div className="app-container">
         <ProductList title="New Arrivals" products={products} />
         <ProductList title="Top Selling" products={products} />
-        <div className="bg-[#F0F0F0] rounded-[40px] py-8 px-6 md:px-14">
+        <div className="bg-[#F0F0F0] rounded-[40px] py-8 px-4 md:px-14">
           <h1 className="font-bold text-[32px] md:text-5xl sub-font text-center px-3">
             BROWSE BY DRESS STYLE
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 rounded-[20px] pt-10">
             <DressCard src={dress1} title="Casual" />
-            <DressCard src={dress2} title="Formal" className="col-span-2" />
-            <DressCard src={dress3} title="Party" className="col-span-2" />
+            <DressCard src={dress2} title="Formal" className="md:col-span-2" />
+            <DressCard src={dress3} title="Party" className="md:col-span-2" />
             <DressCard src={dress4} title="Gym" />
           </div>
         </div>
