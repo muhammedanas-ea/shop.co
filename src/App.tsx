@@ -1,16 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import CategoryPage from "./pages/CategoryPage";
-import Layout from "./layout/Layout";
+import UserRouter from "./routes/UserRouter";
 
 export default function App() {
   return (
     <Router>
       <Routes>
-        <Route element={<Layout />}>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/category" element={<CategoryPage />} />
-        </Route>
+        <Route path="/" element={<UserRouter />} />
       </Routes>
     </Router>
   );
