@@ -1,6 +1,7 @@
 import { FaEnvelope } from "react-icons/fa";
 import { FaGithub, FaInstagram, FaTwitter } from "react-icons/fa6";
 import { MdOutlineFacebook } from "react-icons/md";
+import Button from "./common/button/Button";
 
 const Footer = () => {
   return (
@@ -22,9 +23,13 @@ const Footer = () => {
                 placeholder="Enter your email address"
               />
             </div>
-            <button className="bg-[#fff] text-base text-black font-semibold rounded-[62px] py-3 px-8 hover:bg-gray-200 transition-colors duration-300">
+            <Button
+              variant="outline"
+              className="text-base font-semibold  py-3 px-8 hover:bg-gray-200"
+            >
+              {" "}
               Subscribe to Newsletter
-            </button>
+            </Button>
           </form>
         </div>
       </div>
@@ -36,10 +41,10 @@ const Footer = () => {
             wear. From women to men.
           </p>
           <div className="flex gap-4 mt-8">
-            <FaTwitter size={24}/>
-            <MdOutlineFacebook size={24}/>
-            <FaInstagram size={24}/>
-            <FaGithub size={24}/>
+            <Button variant="ghost"><FaTwitter size={24} /></Button>
+            <Button variant="ghost"><MdOutlineFacebook size={24} /></Button>
+            <Button variant="ghost"><FaInstagram size={24} /></Button>
+            <Button variant="ghost"><FaGithub size={24} /></Button>
           </div>
         </div>
         <div>

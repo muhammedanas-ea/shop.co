@@ -1,5 +1,6 @@
 import heroImg from "../../../assets/heroImag/Rectangle_2-removebg-preview.png";
 import icon from "../../../assets/heroImag/Vector-removebg-preview.png";
+import Button from "../../common/button/Button";
 
 const Hero = () => {
   return (
@@ -14,9 +15,7 @@ const Hero = () => {
             designed to bring out your individuality and cater to your sense of
             style.
           </p>
-          <button className="w-full lg:w-52 rounded-[62px] py-4 bg-black text-white text-base">
-            Shop Now
-          </button>
+          <Button variant="solid" className="w-full lg:w-52 py-4 text-base">Shop Now</Button>
           <div className="mt-8 grid grid-cols-2 lg:grid-cols-3 text-center gap-5">
             <div>
               <h1 className="font-bold text-2xl md:text-4xl">200+</h1>

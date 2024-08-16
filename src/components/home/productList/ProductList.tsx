@@ -1,3 +1,4 @@
+import Button from "../../common/button/Button";
 import ProductCard from "../../common/productcard/ProductCard";
 import { ProductListProps } from "./types";
 
@@ -19,9 +20,7 @@ const ProductList = ({ title, products }: ProductListProps) => {
         ))}
       </div>
       <div className="flex justify-center py-10">
-        <button className="border w-full md:w-auto px-20 rounded-[62px] text-sm md:text-base font-medium py-4">
-          View All
-        </button>
+        <Button className="text-sm md:text-base font-medium py-4 w-full md:w-auto px-20" variant="outline">View All</Button>
       </div>
     </div>
   );
