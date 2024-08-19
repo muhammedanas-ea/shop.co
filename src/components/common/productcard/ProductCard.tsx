@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import { productProps } from "./types";
 
 const ProductCard = ({ image, name, price, rating }: productProps) => {
   return (
-    <div className="bg-white">
+    <Link to={"/productdetails"}><div className="bg-white" >
       <div className="md:h-72 h-44 w-full">
         <img
           src={image}
@@ -18,6 +19,7 @@ const ProductCard = ({ image, name, price, rating }: productProps) => {
         <h3 className="text-black font-bold md:text-2xl text-xl">${price}</h3>
       </div>
     </div>
+    </Link>
   );
 };
 
