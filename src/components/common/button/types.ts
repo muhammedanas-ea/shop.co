@@ -1,7 +1,7 @@
 import React from "react";
 
 type buttonTypes = "submit" | "reset" | "button"
-type variant = "solid" | "outline" | "ghost"
+type variant = "solid" | "outline" | "ghost" | "primary"
 
 export interface buttonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>{
     children?:React.ReactNode

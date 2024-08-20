@@ -2,6 +2,7 @@ import { BsFilter } from "react-icons/bs";
 import FilterCategory from "../filterCategory/FilterCategory";
 import { IoMdClose } from "react-icons/io";
 import { FilterProps } from "./types";
+import Button from "../../common/button/Button";
 
 const Filter = ({ open, setOpen }: FilterProps) => {
   const categories = ["T-shirts", "Shorts", "Shirts", "Hoodies", "Jeans"];
@@ -40,8 +41,9 @@ const Filter = ({ open, setOpen }: FilterProps) => {
         <FilterCategory title="Categories">
           <ul className="py-3 text-base text-[#0007]">
             {categories.map((category) => (
-              <li key={category} className="py-1">
-                {category}
+              <li key={category} className="py-1 flex items-center gap-3">
+                <input type="checkbox" id={category} name={category} />
+                <label htmlFor={category}>{category}</label>
               </li>
             ))}
           </ul>
@@ -63,9 +65,13 @@ const Filter = ({ open, setOpen }: FilterProps) => {
         </FilterCategory>
 
         <FilterCategory title="Size">
-          <ul className="space-y-2">
+          <ul className="py-2 flex flex-wrap gap-3">
             {sizes.map((size) => (
-              <li key={size}>{size}</li>
+              <li key={size} className="text-sm">
+                <Button variant="primary" className="px-6 py-2">
+                  {size}
+                </Button>
+              </li>
             ))}
           </ul>
         </FilterCategory>
@@ -73,8 +79,9 @@ const Filter = ({ open, setOpen }: FilterProps) => {
         <FilterCategory title="Dress Style">
           <ul className="text-base text-[#0007] py-2">
             {dressStyles.map((style) => (
-              <li key={style} className="py-1">
-                {style}
+              <li key={style} className="py-1 flex items-center gap-3">
+                <input type="checkbox" id={style} name={style} />
+                <label htmlFor={style}>{style}</label>
               </li>
             ))}
           </ul>

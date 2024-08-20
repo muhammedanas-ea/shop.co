@@ -17,6 +17,15 @@
   .sub-font{
     font-family: "Integral CF Bold";
   }
+  input[type="checkbox"] {
+    accent-color: black; /* For modern browsers */
+  }
+  
+  input[type="checkbox"]:checked {
+    background-color: black; /* For browsers that don't support accent-color */
+    border-color: black; /* Optional: change border color when checked */
+  }
+  
 
   /* Medium screens (tablets, 768px and up) */
   @media (min-width: 768px) {

@@ -126,8 +126,8 @@ const ProductDetailPage = () => {
               {sizes.map((size, index) => (
                 <Button
                   key={index}
-                  variant="ghost"
-                  className="rounded-full px-6 py-3 bg-[#F0EEED]"
+                  variant="primary"
+                  className="rounded-full"
                 >
                   {size}
                 </Button>
@@ -137,7 +137,7 @@ const ProductDetailPage = () => {
 
           {/* Add to Cart Button */}
           <div className="mt-8 flex gap-3 items-center">
-            <div className="flex items-center gap-4 text-lg p-3 border bg-[#F0EEED] rounded-[62px] w-full lg:w-[170px] justify-around">
+            <div className="flex items-center gap-4 text-lg p-3 border bg-[#F0EEED] rounded-[62px] w-[170px] justify-around">
               <FaMinus size={15} />
               <h1>1</h1>
               <FaPlus size={15}/>
