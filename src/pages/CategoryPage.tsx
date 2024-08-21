@@ -72,7 +72,7 @@ const products = [
 const CategoryPage = () => {
   const [open, setOpen] = useState<boolean>(false);
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const itemsPerPage = 1;
+  const itemsPerPage = 6;
 
   const totalPages = Math.ceil(products.length / itemsPerPage);
  
