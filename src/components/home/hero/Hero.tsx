@@ -4,7 +4,7 @@ import Button from "../../common/button/Button";
 
 const Hero = () => {
   return (
-    <section className="bg-[#F2F0F1] lg:h-screen">
+    <section className="bg-[#F2F0F1] lg:max-h-screen">
       <div className="app-container flex flex-col md:items-center lg:flex-row gap-5 ">
         <div className="max-w-xl flex flex-col justify-center md:text-center lg:text-start mt-10 ">
           <h1 className="font-bold text-4xl md:text-6xl sub-font">
@@ -15,7 +15,9 @@ const Hero = () => {
             designed to bring out your individuality and cater to your sense of
             style.
           </p>
-          <Button variant="solid" className="w-full lg:w-52 py-4 text-base">Shop Now</Button>
+          <Button variant="solid" className="w-full lg:w-52 py-4 text-base">
+            Shop Now
+          </Button>
           <div className="mt-8 grid grid-cols-2 lg:grid-cols-3 text-center gap-5">
             <div>
               <h1 className="font-bold text-2xl md:text-4xl">200+</h1>
