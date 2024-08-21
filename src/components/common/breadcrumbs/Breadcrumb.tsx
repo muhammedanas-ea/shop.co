@@ -9,7 +9,7 @@ const Breadcrumb = ({ items }: breadcrumbItemsProps) => {
         <ul className="flex text-sm md:text-base items-center gap-2">
           {items.map((item) => (
             item.url ? (
-              <li key={item.text} className="flex items-center gap-2">
+              <li key={item.url} className="flex items-center gap-2">
                 <Link
                   className="text-[#0000008a]"
                   to={item.url}

@@ -7,7 +7,8 @@ import product2 from "../assets/productImg/image 8 (1).png";
 import product3 from "../assets/productImg/image 8.png";
 import product4 from "../assets/productImg/image 9.png";
 import { useState } from "react";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
+// import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
+import Pagination from "../components/category/pagination/Pagination";
 
 const breadcrumbItems = [{ text: "Home", url: "/" }, { text: "Casual" }];
 
@@ -70,6 +71,15 @@ const products = [
 
 const CategoryPage = () => {
   const [open, setOpen] = useState<boolean>(false);
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const itemsPerPage = 1;
+
+  const totalPages = Math.ceil(products.length / itemsPerPage);
+ 
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+  };
 
   return (
     <section className="app-container mb-36">
@@ -115,19 +125,11 @@ const CategoryPage = () => {
               />
             ))}
           </div>
-          <div className="flex justify-between items-center text-sm py-3 border-t">
-            <button className="flex items-center gap-3 px-10 py-2  rounded-md border">
-              <FaArrowLeft />
-              <h1>Previous</h1>
-            </button>
-            <div>
-              <div className="h-10 w-10 bg-gray-300 rounded-md flex justify-center items-center">1</div>
-            </div>
-            <button className="flex items-center gap-3 px-10 py-2 rounded-md border ">
-              <h1>Next</h1>
-              <FaArrowRight />
-            </button>
-          </div>
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={handlePageChange}
+          />
         </div>
       </div>
     </section>
