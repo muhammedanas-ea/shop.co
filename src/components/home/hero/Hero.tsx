@@ -1,38 +1,50 @@
 import heroImg from "../../../assets/heroImag/Rectangle_2-removebg-preview.png";
 import icon from "../../../assets/heroImag/Vector-removebg-preview.png";
 import Button from "../../common/button/Button";
+import Typography from "../../common/typography/Typography";
+import brand1 from "../../../assets/brandImg/Group (1).png";
+import brand2 from "../../../assets/brandImg/Group.png";
+import brand3 from "../../../assets/brandImg/gucci-logo-1 1.png";
+import brand4 from "../../../assets/brandImg/prada-logo-1 1.png";
+import brand5 from "../../../assets/brandImg/zara-logo-1 1.png";
 
 const Hero = () => {
+  const brands = [
+    { image: brand1 },
+    { image: brand2 },
+    { image: brand3 },
+    { image: brand4 },
+    { image: brand5 },
+  ];
+
   return (
     <section className="bg-[#F2F0F1] lg:max-h-screen">
       <div className="app-container flex flex-col md:items-center lg:flex-row gap-5 ">
         <div className="max-w-xl flex flex-col justify-center md:text-center lg:text-start mt-10 ">
-          <h1 className="font-bold text-4xl md:text-6xl sub-font">
-            FIND CLOTHES THAT MATCHES YOUR STYLE
-          </h1>
-          <p className="md:text-base text-sm mt-3 mb-5">
+          <Typography tag="h1">FIND CLOTHES THAT MATCHES YOUR STYLE</Typography>
+          <Typography tag="p" className="mt-3 mb-5 text-gray-500">
             Browse through our diverse range of meticulously crafted garments,
             designed to bring out your individuality and cater to your sense of
             style.
-          </p>
+          </Typography>
           <Button variant="solid" className="w-full lg:w-52 py-4 text-base">
             Shop Now
           </Button>
           <div className="mt-8 grid grid-cols-2 lg:grid-cols-3 text-center gap-5">
             <div>
-              <h1 className="font-bold text-2xl md:text-4xl">200+</h1>
+              <Typography tag="h4">200+</Typography>
               <h1 className="text-xs md:text-base text-[#0000008a]">
                 International Brands
               </h1>
             </div>
             <div>
-              <h1 className="font-bold text-2xl md:text-4xl">2,000+</h1>
+              <Typography tag="h4">2,000+</Typography>
               <h1 className="text-xs md:text-base text-[#0000008a]">
                 High-Quality Products
               </h1>
             </div>
             <div className="col-span-2 lg:col-span-1">
-              <h1 className="font-bold text-2xl md:text-4xl">30,000+</h1>
+              <Typography tag="h4">30,000+</Typography>
               <h1 className="text-xs md:text-base text-[#0000008a]">
                 Happy Customers
               </h1>
@@ -51,7 +63,20 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="h-28 bg-black marquee"></div>
+      <div className="h-28 bg-black overflow-hidden">
+        <div className="marquee flex items-center gap-5 h-full justify-around">
+          {brands.map((item) => {
+            return (
+              <img
+                key={item.image}
+                className="object-contain"
+                src={item.image}
+                alt={item.image}
+              />
+            );
+          })}
+        </div>
+      </div>
     </section>
   );
 };

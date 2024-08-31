@@ -1,13 +1,14 @@
 import Button from "../../common/button/Button";
 import ProductCard from "../../common/productcard/ProductCard";
+import Typography from "../../common/typography/Typography";
 import { ProductListProps } from "./types";
 
 const ProductList = ({ title, products }: ProductListProps) => {
   return (
     <div className="my-7">
-      <h1 className="font-bold text-3xl md:text-5xl sub-font text-center py-6">
+      <Typography tag="h2" className="text-center py-6">
         {title}
-      </h1>
+      </Typography>
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 py-4">
         {products?.map((product) => (
           <ProductCard

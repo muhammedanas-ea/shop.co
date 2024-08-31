@@ -5,7 +5,7 @@ const DressCard = ({ src, title, className}:dressCardProps) => {
     <div className={className}>
       <div className="h-48 lg:h-64 relative">
         <img
-          className="w-full h-full object-cover rounded-[20px] shadow-md border"
+          className="w-full h-full object-cover rounded-[20px] shadow-md border border-[#00000033]"
           src={src}
           alt={title}
         />

@@ -12,6 +12,7 @@ import product4 from "../assets/productImg/image 9.png";
 import ReviewCard from "../components/common/reviewCard/ReviewCard";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import { useState } from "react";
+import Typography from "../components/common/typography/Typography";
 
 const products = [
   {
@@ -72,9 +73,9 @@ const HomePage = () => {
         <ProductList title="New Arrivals" products={products} />
         <ProductList title="Top Selling" products={products} />
         <div className="bg-[#fff] rounded-[40px] py-8">
-          <h1 className="font-bold text-[32px] md:text-5xl sub-font max-w-md">
+          <Typography tag="h2" className="max-w-md">
             BROWSE BY DRESS STYLE
-          </h1>
+          </Typography>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 rounded-[20px] pt-10">
             <DressCard src={dress1} title="Casual" />
             <DressCard src={dress2} title="Formal" className="md:col-span-2" />
@@ -83,9 +84,9 @@ const HomePage = () => {
           </div>
         </div>
         <div className="flex justify-between items-end py-12">
-          <h1 className="font-bold text-[32px] md:text-5xl sub-font">
+          <Typography tag="h2" className="sub-font">
             OUR HAPPY CUSTOMERS
-          </h1>
+          </Typography>
           <div className="flex items-center gap-4">
             <FaArrowLeft size={22} onClick={handleMoveLeft} />
             <FaArrowRight size={22} onClick={handleMoveRight} />

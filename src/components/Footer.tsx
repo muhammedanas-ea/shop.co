@@ -2,14 +2,15 @@ import { FaEnvelope } from "react-icons/fa";
 import { FaGithub, FaInstagram, FaTwitter } from "react-icons/fa6";
 import { MdOutlineFacebook } from "react-icons/md";
 import Button from "./common/button/Button";
+import Typography from "./common/typography/Typography";
 
 const Footer = () => {
   return (
     <footer className="bg-[#F0F0F0] app-container  absolute w-full max-w-screen-2xl">
       <div className="bg-black flex flex-col lg:flex-row justify-between items-center rounded-[20px] px-10 py-10 space-y-8 lg:space-y-0 -mt-20 relative ">
-        <h1 className="font-bold text-white text-[32px] md:text-5xl sub-font max-w-2xl">
+        <Typography tag="h2" className="text-white sub-font max-w-2xl">
           STAY UP TO DATE ABOUT OUR LATEST OFFERS
-        </h1>
+        </Typography>
         <div className="w-full lg:w-auto">
           <form className="flex flex-col  gap-4 w-full" action="">
             <div className="relative w-full">
