@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { productProps } from "./types";
+import Typography from "../typography/Typography";
 
 const ProductCard = ({ image, name, price, rating }: productProps) => {
   return (
@@ -11,12 +12,12 @@ const ProductCard = ({ image, name, price, rating }: productProps) => {
           className="w-full h-full object-cover rounded-[20px]"
         />
       </div>
-      <h3 className="font-bold text-base md:text-xl my-2 truncate">{name}</h3>
+      <Typography tag="h5" className="my-2 truncate">{name}</Typography>
       <div className="flex flex-col gap-1">
         <p className="text-yellow-500 md:text-sm text-xs">
           ★★★★ <span className="text-black">{rating}</span>
         </p>
-        <h3 className="text-black font-bold md:text-2xl text-xl">${price}</h3>
+        <Typography tag="h3">${price}</Typography>
       </div>
     </div>
     </Link>

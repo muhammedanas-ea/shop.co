@@ -3,6 +3,7 @@ import Layout from "../layout/Layout";
 import HomePage from "../pages/HomePage";
 import CategoryPage from "../pages/CategoryPage";
 import ProductDetailPage from "../pages/ProductDetailPage";
+import CartPage from "../pages/CartPage";
 
 const UserRouter = () => {
   return (
@@ -11,6 +12,7 @@ const UserRouter = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/category" element={<CategoryPage />} />
         <Route path="/productdetails" element={<ProductDetailPage />} />
+        <Route path="/cart" element={<CartPage />} />
       </Route>
     </Routes>
   );

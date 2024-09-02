@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import heroImg from "../../../assets/heroImag/Rectangle_2-removebg-preview.png";
 import icon from "../../../assets/heroImag/Vector-removebg-preview.png";
 import Button from "../../common/button/Button";
@@ -20,7 +21,12 @@ const Hero = () => {
   return (
     <section className="bg-[#F2F0F1] lg:max-h-screen">
       <div className="app-container flex flex-col md:items-center lg:flex-row gap-5 ">
-        <div className="max-w-xl flex flex-col justify-center md:text-center lg:text-start mt-10 ">
+        <motion.div
+           initial="hidden"
+           whileInView="visible"
+           viewport={{ once: true }}
+          className="max-w-xl flex flex-col justify-center md:text-center lg:text-start mt-10 "
+        >
           <Typography tag="h1">FIND CLOTHES THAT MATCHES YOUR STYLE</Typography>
           <Typography tag="p" className="mt-3 mb-5 text-gray-500">
             Browse through our diverse range of meticulously crafted garments,
@@ -50,7 +56,7 @@ const Hero = () => {
               </h1>
             </div>
           </div>
-        </div>
+        </motion.div>
         <div className="lg:mt-14 ">
           <div className="lg:ml-20 relative">
             <img src={heroImg} alt="" />

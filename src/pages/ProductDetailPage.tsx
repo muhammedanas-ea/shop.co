@@ -4,6 +4,7 @@ import mainImg from "../assets/productImg/image 10.png";
 import { FaMinus, FaPlus } from "react-icons/fa6";
 import ProductList from "../components/home/productList/ProductList";
 import ProductSection from "../components/productDeatils/productSection/ProductSection";
+import Typography from "../components/common/typography/Typography";
 
 const products = [
   {
@@ -78,12 +79,11 @@ const ProductDetailPage = () => {
           </div>
         </div>
 
-        {/* Product Details Section */}
         <div className="lg:w-1/2">
           <div className="pb-6 border-b">
-            <h1 className="font-bold text-2xl md:text-4xl sub-font">
+            <Typography tag="h4" className="sub-font">
               One Life Graphic T-shirt
-            </h1>
+            </Typography>
             <p className="text-yellow-500 text-xs md:text-2xl mt-2">
               ★★★★ <span className="text-black">4.4/5</span>
             </p>
@@ -94,7 +94,6 @@ const ProductDetailPage = () => {
             </p>
           </div>
 
-          {/* Color Selection */}
           <div className="py-6 border-b">
             <p className="text-base">Select Colors</p>
             <div className="mt-2 flex gap-3 items-center">
@@ -108,7 +107,6 @@ const ProductDetailPage = () => {
             </div>
           </div>
 
-          {/* Size Selection */}
           <div className="py-6 border-b">
             <p className="text-base">Choose Size</p>
             <div className="mt-3 flex gap-3 items-center">
@@ -120,7 +118,6 @@ const ProductDetailPage = () => {
             </div>
           </div>
 
-          {/* Add to Cart Button */}
           <div className="mt-8 flex gap-3 items-center">
             <div className="flex items-center gap-4 text-lg p-3 border bg-[#F0EEED] rounded-[62px] w-[170px] justify-around">
               <FaMinus size={15} />
@@ -134,7 +131,6 @@ const ProductDetailPage = () => {
         </div>
       </div>
       <div>
-      {/* Section Navigation */}
       <ProductSection/>
     </div>
       <ProductList title="You might also like" products={products} />

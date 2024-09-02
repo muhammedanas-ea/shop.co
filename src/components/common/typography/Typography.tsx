@@ -11,9 +11,9 @@ const Typography: React.FC<typographyProps> = ({
   const typographyClasses = classNames({
     "font-bold text-4xl md:text-6xl sub-font": tag === "h1",
     "font-bold text-[32px] md:text-5xl sub-font": tag === "h2",
-    // "": tag === "h3",
+    "text-black font-bold md:text-2xl text-xl": tag === "h3",
     "font-bold text-2xl md:text-4xl": tag === "h4",
-    // "": tag === "h5",
+    "font-bold text-base md:text-xl": tag === "h5",
     // "": tag === "h6",
     "md:text-base text-sm": tag === "p",
     // "": tag === "span",
