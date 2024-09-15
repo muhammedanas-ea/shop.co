@@ -20,7 +20,7 @@ const Hero = () => {
 
   return (
     <section className="bg-[#F2F0F1] lg:max-h-screen">
-      <div className="app-container flex flex-col md:items-center lg:flex-row gap-5 ">
+      <div className="app-container flex flex-col md:items-center lg:flex-row gap-5 max-w-screen-2xl mx-auto">
         <motion.div
            initial="hidden"
            whileInView="visible"

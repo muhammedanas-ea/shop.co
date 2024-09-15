@@ -14,9 +14,7 @@ const Typography: React.FC<typographyProps> = ({
     "text-black font-bold md:text-2xl text-xl": tag === "h3",
     "font-bold text-2xl md:text-4xl": tag === "h4",
     "font-bold text-base md:text-xl": tag === "h5",
-    // "": tag === "h6",
     "md:text-base text-sm": tag === "p",
-    // "": tag === "span",
   },className);
 
   return React.createElement(

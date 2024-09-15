@@ -19,7 +19,7 @@ const CartPage = () => {
   const total = subtotal + tax + shipping;
 
   return (
-    <div className="app-container mb-36">
+    <div className="app-container mb-36 max-w-screen-2xl mx-auto">
       <Breadcrumb items={breadcrumbItems} />
       <Typography tag="h4" className="sub-font">
         Your cart

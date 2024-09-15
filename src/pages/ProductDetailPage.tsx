@@ -45,7 +45,7 @@ const ProductDetailPage = () => {
   const sizes = ["Small", "Medium", "Large"];
 
   return (
-    <div className="app-container mb-36">
+    <div className="app-container mb-36 max-w-screen-2xl mx-auto">
       <Breadcrumb items={breadcrumbItems} />
       <div className="flex flex-col gap-5 lg:flex-row mt-3">
         {/* Image Section */}

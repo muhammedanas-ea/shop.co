@@ -69,7 +69,7 @@ const HomePage = () => {
   return (
     <section>
       <Hero />
-      <div className="app-container">
+      <div className="app-container max-w-screen-2xl mx-auto">
         <ProductList title="New Arrivals" products={products} />
         <ProductList title="Top Selling" products={products} />
         <div className="bg-[#fff] rounded-[40px] py-8">

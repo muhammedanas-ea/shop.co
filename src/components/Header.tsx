@@ -13,8 +13,8 @@ const Header = () => {
   };
 
   return (
-    <div className="app-container sticky top-0 bg-white z-30 border-b">
-      <header className="py-5 flex items-center justify-between">
+    <div className="py-5 sticky top-0 bg-white z-30 border-b">
+      <header className="flex app-container  items-center justify-between max-w-screen-2xl mx-auto">
         <div className="flex items-center gap-8">
           {isMobileMenuOpen ? (
             <IoMdClose 

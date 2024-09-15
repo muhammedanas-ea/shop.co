@@ -37,7 +37,6 @@ const Filter = ({ open, setOpen }: FilterProps) => {
     categories: [],
   });
 
-  console.log(filterData);
   const handleCategoriesChange = (category: string) => {
     setFilterData((prev) => {
       const newCategories = prev.categories.includes(category)

@@ -1,99 +1,32 @@
+import { Suspense, useState, lazy } from "react";
 import Filter from "../components/category/filter/Filter";
 import Breadcrumb from "../components/common/breadcrumbs/Breadcrumb";
-import ProductCard from "../components/common/productcard/ProductCard";
 import { BsFilter } from "react-icons/bs";
-import product1 from "../assets/productImg/image 10.png";
-import product2 from "../assets/productImg/image 8 (1).png";
-import product3 from "../assets/productImg/image 8.png";
-import product4 from "../assets/productImg/image 9.png";
-import { useState } from "react";
-// import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
-import Pagination from "../components/category/pagination/Pagination";
+import useProducts from "../hooks/useProducts";
+import ProductCardSkeleton from "../components/common/productcard/ProductCardSkelton";
+const ProductCard = lazy(() =>
+  import("../components/common/productcard/ProductCard")
+);
 
 const breadcrumbItems = [{ text: "Home", url: "/" }, { text: "Casual" }];
 
-const products = [
-  {
-    image: product1,
-    name: "Gradient Graphic T-shirt",
-    price: 145,
-    rating: 3.5,
-  },
-  {
-    image: product1,
-    name: "Gradient Graphic T-shirt",
-    price: 145,
-    rating: 3.5,
-  },
-  {
-    image: product1,
-    name: "Gradient Graphic T-shirt",
-    price: 145,
-    rating: 3.5,
-  },
-  {
-    image: product2,
-    name: "Polo with Tipping Details",
-    price: 180,
-    rating: 4.5,
-  },
-  {
-    image: product4,
-    name: "Polo with Tipping Details",
-    price: 180,
-    rating: 4.5,
-  },
-  {
-    image: product3,
-    name: "Polo with Tipping Details",
-    price: 180,
-    rating: 4.5,
-  },
-  {
-    image: product2,
-    name: "Polo with Tipping Details",
-    price: 180,
-    rating: 4.5,
-  },
-  {
-    image: product4,
-    name: "Polo with Tipping Details",
-    price: 180,
-    rating: 4.5,
-  },
-  {
-    image: product3,
-    name: "Polo with Tipping Details",
-    price: 180,
-    rating: 4.5,
-  },
-];
-
 const CategoryPage = () => {
   const [open, setOpen] = useState<boolean>(false);
-  const [currentPage, setCurrentPage] = useState<number>(1);
-  const itemsPerPage = 6;
+  const products = useProducts();
 
-  const totalPages = Math.ceil(products.length / itemsPerPage);
- 
-
-  const handlePageChange = (page: number) => {
-    setCurrentPage(page);
-  };
-
-  return (
-    <section className="app-container mb-36">
+  return products ? (
+    <section className="app-container mb-36 max-w-screen-2xl mx-auto">
       <Breadcrumb items={breadcrumbItems} />
       <div className="flex gap-5 py-2">
         <div
-          className={`lg:w-1/4 w-full bg-white lg:block rounded-[20px]  border fixed lg:static top-0 left-0 h-full z-50 lg:z-auto transform ${
+          className={`lg:w-1/4 w-full bg-white lg:block  rounded-[20px] border fixed lg:static top-0 left-0 h-full z-50 lg:z-auto transform ${
             open ? "translate-x-0 overflow-y-scroll" : "-translate-x-full"
           } lg:transform-none transition-transform duration-300 ease-in-out`}
         >
           <Filter open={open} setOpen={setOpen} />
         </div>
 
-        <div className="lg:w-3/4 w-full ">
+        <div className="lg:w-3/4 w-full">
           <div className="flex items-center justify-between py-3">
             <div className="flex items-center gap-4 lg:justify-between lg:gap-0 lg:w-full">
               <h2 className="text-2xl md:text-3xl font-bold">Casual</h2>
@@ -114,25 +47,38 @@ const CategoryPage = () => {
             </button>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 py-6">
-            {products.map((item) => (
-              <ProductCard
-                key={item.image}
-                image={item.image}
-                name={item.name}
-                price={item.price}
-                rating={item.rating}
-              />
-            ))}
+          <div className=" grid grid-cols-2 md:grid-cols-3 gap-4 py-6">
+            {products &&
+              products.map((item) => (
+                <Suspense fallback={<ProductCardSkeleton />}>
+                  <ProductCard
+                    key={item.id}
+                    image={item.images[0]}
+                    name={item.title}
+                    price={item.price}
+                    rating={item.rating}
+                  />
+                </Suspense>
+              ))}
           </div>
-          <Pagination
-            currentPage={currentPage}
-            totalPages={totalPages}
-            onPageChange={handlePageChange}
-          />
         </div>
       </div>
     </section>
+  ) : (
+    <div className="h-screen flex flex-col items-center justify-center bg-gray-100">
+      <div className="text-center">
+        <h1 className="text-3xl font-bold text-gray-800 mb-2">
+          Oops! Product Not Available
+        </h1>
+        <p className="text-lg text-gray-600 mb-8">
+          The product you're looking for is currently unavailable. Please check
+          again later or browse similar items below.
+        </p>
+        <button className="px-6 py-3 bg-blue-600 text-white rounded-full shadow hover:bg-blue-700 transition">
+          Back to Homepage
+        </button>
+      </div>
+    </div>
   );
 };
 

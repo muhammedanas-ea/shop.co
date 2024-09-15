@@ -6,8 +6,8 @@ import Typography from "./common/typography/Typography";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#F0F0F0] app-container  absolute w-full max-w-screen-2xl">
-      <div className="bg-black flex flex-col lg:flex-row justify-between items-center rounded-[20px] px-10 py-10 space-y-8 lg:space-y-0 -mt-20 relative ">
+    <footer className="bg-[#F0F0F0] app-container  absolute w-full">
+      <div className="bg-black max-w-screen-2xl mx-auto flex flex-col lg:flex-row justify-between items-center rounded-[20px] px-10 py-10 space-y-8 lg:space-y-0 -mt-20 relative ">
         <Typography tag="h2" className="text-white sub-font max-w-2xl">
           STAY UP TO DATE ABOUT OUR LATEST OFFERS
         </Typography>
@@ -34,7 +34,7 @@ const Footer = () => {
           </form>
         </div>
       </div>
-      <div className="py-10 grid-cols-2 grid lg:grid-cols-6 gap-5 border-b border-b-[#0000004d]">
+      <div className="py-10 grid-cols-2 grid lg:grid-cols-6 gap-5 border-b border-b-[#0000004d] max-w-screen-2xl mx-auto">
         <div className="col-span-2">
           <h1 className="font-bold text-2xl md:text-3xl sub-font">SHOP.CO</h1>
           <p className="mt-3 text-sm">
@@ -93,7 +93,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="flex  justify-center lg:justify-between pt-5 pb-[100px]">
+      <div className="flex max-w-screen-2xl mx-auto  justify-center lg:justify-between pt-5 pb-[100px]">
         <h1 className="text-sm text-gray-400">
           Shop.co © 2000-2023, All Rights Reserved
         </h1>

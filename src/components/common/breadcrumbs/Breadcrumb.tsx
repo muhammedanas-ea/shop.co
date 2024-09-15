@@ -7,9 +7,9 @@ const Breadcrumb = ({ items }: breadcrumbItemsProps) => {
     <nav aria-label="Breadcrumb">
       <div className="py-3">
         <ul className="flex text-sm md:text-base items-center gap-2">
-          {items.map((item) => (
+          {items.map((item, index) =>
             item.url ? (
-              <li key={item.url} className="flex items-center gap-2">
+              <li key={index} className="flex items-center gap-2">
                 <Link
                   className="text-[#0000008a]"
                   to={item.url}
@@ -22,9 +22,9 @@ const Breadcrumb = ({ items }: breadcrumbItemsProps) => {
                 </span>
               </li>
             ) : (
-              <li>{item.text}</li>
+              <li key={index}>{item.text}</li>
             )
-          ))}
+          )}
         </ul>
       </div>
     </nav>
