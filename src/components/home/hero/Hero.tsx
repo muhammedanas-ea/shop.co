@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import heroImg from "../../../assets/heroImag/Rectangle_2-removebg-preview.png";
 import icon from "../../../assets/heroImag/Vector-removebg-preview.png";
 import Button from "../../common/button/Button";
@@ -21,12 +20,7 @@ const Hero = () => {
   return (
     <section className="bg-[#F2F0F1] lg:max-h-screen">
       <div className="app-container flex flex-col md:items-center lg:flex-row gap-5 max-w-screen-2xl mx-auto">
-        <motion.div
-           initial="hidden"
-           whileInView="visible"
-           viewport={{ once: true }}
-          className="max-w-xl flex flex-col justify-center md:text-center lg:text-start mt-10 "
-        >
+        <div className="max-w-xl flex flex-col justify-center md:text-center lg:text-start mt-10 ">
           <Typography tag="h1">FIND CLOTHES THAT MATCHES YOUR STYLE</Typography>
           <Typography tag="p" className="mt-3 mb-5 text-gray-500">
             Browse through our diverse range of meticulously crafted garments,
@@ -56,15 +50,15 @@ const Hero = () => {
               </h1>
             </div>
           </div>
-        </motion.div>
+        </div>
         <div className="lg:mt-14 ">
           <div className="lg:ml-20 relative">
-            <img src={heroImg} alt="" />
+            <img src={heroImg} alt="main image" />
             <div className="absolute top-0 w-16 h-16 md:w-28 md:h-28 right-0">
-              <img className="w-full h-full object-cover" src={icon} alt="" />
+              <img className="w-full h-full object-cover" src={icon} alt="star" />
             </div>
             <div className="absolute top-36 md:w-14 md:h-14 w-11 h-11">
-              <img className="w-full h-full object-cover" src={icon} alt="" />
+              <img className="w-full h-full object-cover" src={icon} alt="star" />
             </div>
           </div>
         </div>
