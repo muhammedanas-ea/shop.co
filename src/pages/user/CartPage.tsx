@@ -1,8 +1,8 @@
-import Breadcrumb from "../components/common/breadcrumbs/Breadcrumb";
-import Typography from "../components/common/typography/Typography";
-import CartItem from "../components/cart/cartiteam/CartIteam";
-import OrderSummary from "../components/cart/ordersummary/OrderSummary";
-import productImg1 from "../assets/productImg/image 8 (1).png"
+import Breadcrumb from "../../components/common/breadcrumbs/Breadcrumb";
+import Typography from "../../components/common/typography/Typography";
+import CartItem from "../../components/cart/cartiteam/CartIteam";
+import OrderSummary from "../../components/cart/ordersummary/OrderSummary";
+import productImg1 from "../../assets/productImg/image 8 (1).png"
 
 const CartPage = () => {
   const breadcrumbItems = [{ text: "Home", url: "/" }, { text: "Cart" }];

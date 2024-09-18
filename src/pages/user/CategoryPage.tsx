@@ -1,11 +1,11 @@
 import { Suspense, useState, lazy } from "react";
-import Filter from "../components/category/filter/Filter";
-import Breadcrumb from "../components/common/breadcrumbs/Breadcrumb";
+import Filter from "../../components/category/filter/Filter";
+import Breadcrumb from "../../components/common/breadcrumbs/Breadcrumb";
 import { BsFilter } from "react-icons/bs";
-import useProducts from "../hooks/useProducts";
-import ProductCardSkeleton from "../components/common/productcard/ProductCardSkelton";
+import useProducts from "../../hooks/useProducts";
+import ProductCardSkeleton from "../../components/common/productcard/ProductCardSkelton";
 const ProductCard = lazy(() =>
-  import("../components/common/productcard/ProductCard")
+  import("../../components/common/productcard/ProductCard")
 );
 
 const breadcrumbItems = [{ text: "Home", url: "/" }, { text: "Casual" }];

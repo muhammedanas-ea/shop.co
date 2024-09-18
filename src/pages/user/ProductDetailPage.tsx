@@ -1,10 +1,10 @@
-import Breadcrumb from "../components/common/breadcrumbs/Breadcrumb";
-import Button from "../components/common/button/Button";
-import mainImg from "../assets/productImg/image 10.png";
+import Breadcrumb from "../../components/common/breadcrumbs/Breadcrumb";
+import Button from "../../components/common/button/Button";
+import mainImg from "../../assets/productImg/image 10.png";
 import { FaMinus, FaPlus } from "react-icons/fa6";
-import ProductList from "../components/home/productList/ProductList";
-import ProductSection from "../components/productDeatils/productSection/ProductSection";
-import Typography from "../components/common/typography/Typography";
+import ProductList from "../../components/home/productList/ProductList";
+import ProductSection from "../../components/productDeatils/productSection/ProductSection";
+import Typography from "../../components/common/typography/Typography";
 
 const products = [
   {

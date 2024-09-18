@@ -1,5 +1,6 @@
 @import url(https://db.onlinewebfonts.com/c/2bf16335573007d828f4197c2b884c04?family=Satoshi);
 @import url(https://db.onlinewebfonts.com/c/b52804ac57ef6e90d2826a6b0f111133?family=Integral+CF+Bold);
+@import url(https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap);
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -16,6 +17,9 @@
   }
   .sub-font{
     font-family: "Integral CF Bold";
+  }
+  .admin-font{
+    font-family: "DM Sans";
   }
   input[type="checkbox"] {
     accent-color: black; /* For modern browsers */

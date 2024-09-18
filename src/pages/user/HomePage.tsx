@@ -1,18 +1,18 @@
-import Hero from "../components/home/hero/Hero";
-import ProductList from "../components/home/productList/ProductList";
-import DressCard from "../components/home/dressCard/DressCard";
-import dress1 from "../assets/dressStyleImg/image 11.png";
-import dress2 from "../assets/dressStyleImg/image 12.png";
-import dress3 from "../assets/dressStyleImg/image 13.png";
-import dress4 from "../assets/dressStyleImg/image 14.png";
-import product1 from "../assets/productImg/image 10.png";
-import product2 from "../assets/productImg/image 8 (1).png";
-import product3 from "../assets/productImg/image 8.png";
-import product4 from "../assets/productImg/image 9.png";
-import ReviewCard from "../components/common/reviewCard/ReviewCard";
+import Hero from "../../components/home/hero/Hero";
+import ProductList from "../../components/home/productList/ProductList";
+import DressCard from "../../components/home/dressCard/DressCard";
+import dress1 from "../../assets/dressStyleImg/image 11.png";
+import dress2 from "../../assets/dressStyleImg/image 12.png";
+import dress3 from "../../assets/dressStyleImg/image 13.png";
+import dress4 from "../../assets/dressStyleImg/image 14.png";
+import product1 from "../../assets/productImg/image 10.png";
+import product2 from "../../assets/productImg/image 8 (1).png";
+import product3 from "../../assets/productImg/image 8.png";
+import product4 from "../../assets/productImg/image 9.png";
+import ReviewCard from "../../components/common/reviewCard/ReviewCard";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import { useState } from "react";
-import Typography from "../components/common/typography/Typography";
+import Typography from "../../components/common/typography/Typography";
 
 const products = [
   {

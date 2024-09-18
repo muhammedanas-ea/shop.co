@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
-import Layout from "../layout/Layout";
-import HomePage from "../pages/HomePage";
-import CategoryPage from "../pages/CategoryPage";
-import ProductDetailPage from "../pages/ProductDetailPage";
-import CartPage from "../pages/CartPage";
+import Layout from "../../layout/user/Layout";
+import HomePage from "../../pages/user/HomePage";
+import CategoryPage from "../../pages/user/CategoryPage";
+import ProductDetailPage from "../../pages/user/ProductDetailPage";
+import CartPage from "../../pages/user/CartPage";
 
 const UserRouter = () => {
   return (
