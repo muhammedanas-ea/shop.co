@@ -19,7 +19,7 @@ const Sidebar = () => {
     {
       id: 2,
       path: "/admin",
-      name: "Users",
+      name: "customers",
       icon: <LuUserCircle size={20} />,
     },
     {

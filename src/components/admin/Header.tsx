@@ -46,7 +46,7 @@ const Header = () => {
             alt="profile"
           />
           <div
-            className={`absolute w-44  bg-white -left-32 -bottom-28 rounded-md border shadow-lg py-3 ${
+            className={`absolute w-44  bg-white -left-32 -bottom-[105px] rounded-md border shadow-lg py-3 ${
               !hidden ? "hidden" : ""
             }`}
           >
