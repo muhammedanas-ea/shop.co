@@ -7,11 +7,10 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
-
+  
   return (
     <div className="py-5 sticky top-0 bg-white z-30 border-b">
       <header className="flex app-container  items-center justify-between max-w-screen-2xl mx-auto">

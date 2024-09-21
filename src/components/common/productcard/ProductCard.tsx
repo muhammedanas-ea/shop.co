@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import { productProps } from "./types";
 import Typography from "../typography/Typography";
+import { memo } from "react";
 
-const ProductCard = ({ image, name, price, rating }: productProps) => {
+const ProductCard = memo(({ image, name, price, rating }: productProps) => {
   return (
     <Link to={"/productdetails"}>
       <div className="bg-white">
@@ -25,6 +26,6 @@ const ProductCard = ({ image, name, price, rating }: productProps) => {
       </div>
     </Link>
   );
-};
+});
 
 export default ProductCard;

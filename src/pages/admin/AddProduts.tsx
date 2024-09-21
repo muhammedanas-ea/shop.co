@@ -28,7 +28,7 @@ const AddProducts = () => {
               Name Product
             </label>
             <input
-              className="rounded-lg bg-gray-100 border-none mt-1"
+              className="rounded-lg bg-gray-200 border-none mt-1"
               type="text"
               id="product-name"
             />
@@ -38,7 +38,7 @@ const AddProducts = () => {
               Description Product
             </label>
             <textarea
-              className="rounded-lg bg-gray-100 border-none mt-1 h-32"
+              className="rounded-lg bg-gray-200 border-none mt-1 h-32"
               id="product-description"
             ></textarea>
           </div>
@@ -50,29 +50,33 @@ const AddProducts = () => {
             {/* Size Options */}
             <div className="flex flex-row mt-3 space-x-3">
               {/* Size Option 1 */}
-              <div className="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-lg shadow-sm cursor-pointer hover:bg-green-300 active:bg-green-300 transition duration-150 ease-in-out">
+              <div className="flex items-center justify-center w-12 h-12 bg-gray-200 rounded-lg shadow-sm cursor-pointer hover:bg-green-300 active:bg-green-300 transition duration-150 ease-in-out">
                 <span className="text-sm">XS</span>
               </div>
-              <div className="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-lg shadow-sm cursor-pointer hover:bg-green-300 active:bg-green-300 transition duration-150 ease-in-out">
+              <div className="flex items-center justify-center w-12 h-12 bg-gray-200 rounded-lg shadow-sm cursor-pointer hover:bg-green-300 active:bg-green-300 transition duration-150 ease-in-out">
                 <span className="text-sm">S</span>
               </div>
 
               {/* Size Option 2 */}
-              <div className="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-lg shadow-sm cursor-pointer hover:bg-green-300 active:bg-green-300 transition duration-150 ease-in-out">
+              <div className="flex items-center justify-center w-12 h-12 bg-gray-200 rounded-lg shadow-sm cursor-pointer hover:bg-green-300 active:bg-green-300 transition duration-150 ease-in-out">
                 <span className="text-sm ">M</span>
               </div>
 
               {/* Size Option 3 */}
-              <div className="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-lg shadow-sm cursor-pointer hover:bg-green-300 active:bg-green-300 transition duration-150 ease-in-out">
+              <div className="flex items-center justify-center w-12 h-12 bg-gray-200 rounded-lg shadow-sm cursor-pointer hover:bg-green-300 active:bg-green-300 transition duration-150 ease-in-out">
                 <span className="text-sm ">XL</span>
               </div>
-              <div className="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-lg shadow-sm cursor-pointer hover:bg-green-300 active:bg-green-300 transition duration-150 ease-in-out">
+              <div className="flex items-center justify-center w-12 h-12 bg-gray-200 rounded-lg shadow-sm cursor-pointer hover:bg-green-300 active:bg-green-300 transition duration-150 ease-in-out">
                 <span className="text-sm ">XXL</span>
               </div>
             </div>
           </div>
         </div>
-        <div className="bg-white h-1/2">2</div>
+        <div className="bg-white p-4 rounded-lg border">
+          <h1 className="font-medium text-lg text-gray-900 tracking-tight admin-font">
+            Upload Img
+          </h1>
+        </div>
       </div>
     </div>
   );

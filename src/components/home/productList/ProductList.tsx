@@ -1,9 +1,10 @@
+import { memo } from "react";
 import Button from "../../common/button/Button";
 import ProductCard from "../../common/productcard/ProductCard";
 import Typography from "../../common/typography/Typography";
 import { ProductListProps } from "./types";
 
-const ProductList = ({ title, products }: ProductListProps) => {
+const ProductList = memo(({ title, products }: ProductListProps) => {
   return (
     <div className="my-7">
       <Typography tag="h2" className="text-center py-6">
@@ -25,6 +26,6 @@ const ProductList = ({ title, products }: ProductListProps) => {
       </div>
     </div>
   );
-};
+});
 
 export default ProductList;

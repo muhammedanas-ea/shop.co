@@ -1,6 +1,7 @@
+import { memo } from "react";
 import { dressCardProps } from "./types";
 
-const DressCard = ({ src, title, className}:dressCardProps) => {
+const DressCard = memo(({ src, title, className}:dressCardProps) => {
   return (
     <div className={className}>
       <div className="h-48 lg:h-64 relative">
@@ -15,6 +16,6 @@ const DressCard = ({ src, title, className}:dressCardProps) => {
       </div>
     </div>
   );
-};
+});
 
 export default DressCard;

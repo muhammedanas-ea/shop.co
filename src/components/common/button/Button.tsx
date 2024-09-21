@@ -1,7 +1,8 @@
 import classNames from "classnames";
 import { buttonProps } from "./types";
+import { memo } from "react";
 
-const Button = ({
+const Button = memo (({
   type,
   className,
   variant,
@@ -24,5 +25,5 @@ const Button = ({
       <span className="flex gap-3 justify-center items-center">{children}</span>
     </button>
   );
-};
+});
 export default Button;

@@ -1,8 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import { typographyProps } from "./types";
 import classNames from "classnames";
 
-const Typography: React.FC<typographyProps> = ({
+const Typography: React.FC<typographyProps> = memo(({
   tag = "h1",
   className,
   children,
@@ -22,6 +22,6 @@ const Typography: React.FC<typographyProps> = ({
     { className: typographyClasses, ...props },
     children
   );
-};
+});
 
 export default Typography;
