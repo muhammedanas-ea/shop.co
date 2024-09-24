@@ -1,14 +1,13 @@
 import { Suspense, useState, lazy } from "react";
-import Filter from "../../components/category/filter/Filter";
-import Breadcrumb from "../../components/common/breadcrumbs/Breadcrumb";
+import Filter from "../../components/user/category/filter/Filter";
+import Breadcrumb from "../../components/user/common/breadcrumbs/Breadcrumb";
 import { BsFilter } from "react-icons/bs";
 import useProducts from "../../hooks/useProducts";
-import ProductCardSkeleton from "../../components/common/productcard/ProductCardSkelton";
+import ProductCardSkeleton from "../../components/user/common/productcard/ProductCardSkelton";
+import { categoryBreadcrumbItems } from "../../constants/breadcrumbItems";
 const ProductCard = lazy(() =>
-  import("../../components/common/productcard/ProductCard")
+  import("../../components/user/common/productcard/ProductCard")
 );
-
-const breadcrumbItems = [{ text: "Home", url: "/" }, { text: "Casual" }];
 
 const CategoryPage = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -16,7 +15,7 @@ const CategoryPage = () => {
 
   return products ? (
     <section className="app-container mb-36 max-w-screen-2xl mx-auto">
-      <Breadcrumb items={breadcrumbItems} />
+      <Breadcrumb items={categoryBreadcrumbItems} />
       <div className="flex gap-5 py-2">
         <div
           className={`lg:w-1/4 w-full bg-white lg:block  rounded-[20px] border fixed lg:static top-0 left-0 h-full z-50 lg:z-auto transform ${

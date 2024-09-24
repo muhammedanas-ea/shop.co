@@ -1,12 +1,12 @@
-import heroImg from "../../../assets/heroImag/Rectangle_2-removebg-preview.png";
-import icon from "../../../assets/heroImag/Vector-removebg-preview.png";
+import heroImg from "../../../../assets/heroImag/Rectangle_2-removebg-preview.png";
+import icon from "../../../../assets/heroImag/Vector-removebg-preview.png";
 import Button from "../../common/button/Button";
 import Typography from "../../common/typography/Typography";
-import brand1 from "../../../assets/brandImg/Group (1).png";
-import brand2 from "../../../assets/brandImg/Group.png";
-import brand3 from "../../../assets/brandImg/gucci-logo-1 1.png";
-import brand4 from "../../../assets/brandImg/prada-logo-1 1.png";
-import brand5 from "../../../assets/brandImg/zara-logo-1 1.png";
+import brand1 from "../../../../assets/brandImg/Group (1).png";
+import brand2 from "../../../../assets/brandImg/Group.png";
+import brand3 from "../../../../assets/brandImg/gucci-logo-1 1.png";
+import brand4 from "../../../../assets/brandImg/prada-logo-1 1.png";
+import brand5 from "../../../../assets/brandImg/zara-logo-1 1.png";
 
 const Hero = () => {
   const brands = [
@@ -53,12 +53,12 @@ const Hero = () => {
         </div>
         <div className="lg:mt-14 ">
           <div className="lg:ml-20 relative">
-            <img src={heroImg} alt="main image" />
+            <img src={heroImg} alt="main image" loading="eager"/>
             <div className="absolute top-0 w-16 h-16 md:w-28 md:h-28 right-0">
-              <img className="w-full h-full object-cover" src={icon} alt="star" />
+              <img loading="lazy" className="w-full h-full object-cover" src={icon} alt="star" />
             </div>
             <div className="absolute top-36 md:w-14 md:h-14 w-11 h-11">
-              <img className="w-full h-full object-cover" src={icon} alt="star" />
+              <img loading="lazy" className="w-full h-full object-cover" src={icon} alt="star" />
             </div>
           </div>
         </div>
@@ -72,6 +72,7 @@ const Hero = () => {
                 className="object-contain"
                 src={item.image}
                 alt={item.image}
+                loading="lazy"
               />
             );
           })}

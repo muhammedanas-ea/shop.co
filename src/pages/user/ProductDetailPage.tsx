@@ -1,10 +1,11 @@
-import Breadcrumb from "../../components/common/breadcrumbs/Breadcrumb";
-import Button from "../../components/common/button/Button";
+import Breadcrumb from "../../components/user/common/breadcrumbs/Breadcrumb";
+import Button from "../../components/user/common/button/Button";
 import mainImg from "../../assets/productImg/image 10.png";
 import { FaMinus, FaPlus } from "react-icons/fa6";
-import ProductList from "../../components/home/productList/ProductList";
-import ProductSection from "../../components/productDeatils/productSection/ProductSection";
-import Typography from "../../components/common/typography/Typography";
+import ProductList from "../../components/user/home/productList/ProductList";
+import ProductSection from "../../components/user/productDeatils/productSection/ProductSection";
+import Typography from "../../components/user/common/typography/Typography";
+import { productDetailBreadcrumbItems } from "../../constants/breadcrumbItems";
 
 const products = [
   {
@@ -34,28 +35,20 @@ const products = [
 ];
 
 const ProductDetailPage = () => {
-  
-  const breadcrumbItems = [
-    { text: "Home", url: "/" },
-    { text: "Shop", url: "/category" },
-    { text: "Product Details" },
-  ];
-
   const colors = ["#000000", "#333333", "#555555"];
   const sizes = ["Small", "Medium", "Large"];
 
   return (
     <div className="app-container mb-36 max-w-screen-2xl mx-auto">
-      <Breadcrumb items={breadcrumbItems} />
+      <Breadcrumb items={productDetailBreadcrumbItems} />
       <div className="flex flex-col gap-5 lg:flex-row mt-3">
-        {/* Image Section */}
         <div className="flex flex-col-reverse lg:flex-row gap-3 w-full lg:w-1/2">
           <div className="grid grid-cols-3 lg:grid-cols-1 gap-3 lg:w-[40%]">
             {Array(3)
               .fill(null)
               .map(() => (
                 <div
-                  key={Math.random()} // Adding a unique key for each element
+                  key={Math.random()} 
                   className="bg-[#F0EEED] rounded-[20px] w-full"
                   aria-label="Product Thumbnail 1"
                 >

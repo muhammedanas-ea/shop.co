@@ -13,7 +13,7 @@ const ProductList = memo(({ title, products }: ProductListProps) => {
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 py-4">
         {products?.map((product) => (
           <ProductCard
-            key={product.name}
+            key={product.image}
             image={product.image}
             name={product.name}
             price={product.price}
