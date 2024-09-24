@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "../../components/admin/Sidebar";
 import Header from "../../components/admin/Header";
-// import { useState } from "react";
+import React from "react";
 
-const Layout = () => {
-  // const [isopen,setOpen] = useState(false)
+
+const Layout = React.memo(() => {
   return (
     <div className="bg-[#F5F5F5]">
       <div className="flex">
@@ -16,6 +16,6 @@ const Layout = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Layout;

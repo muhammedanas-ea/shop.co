@@ -5,9 +5,8 @@ import { BsFilter } from "react-icons/bs";
 import useProducts from "../../hooks/useProducts";
 import ProductCardSkeleton from "../../components/user/common/productcard/ProductCardSkelton";
 import { categoryBreadcrumbItems } from "../../constants/breadcrumbItems";
-const ProductCard = lazy(() =>
-  import("../../components/user/common/productcard/ProductCard")
-);
+
+const ProductCard = lazy(() => import("../../components/user/common/productcard/ProductCard"));
 
 const CategoryPage = () => {
   const [open, setOpen] = useState<boolean>(false);

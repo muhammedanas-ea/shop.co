@@ -1,8 +1,9 @@
 import Header from "../../components/user/Header";
 import Footer from "../../components/user/Footer";
 import { Outlet } from "react-router-dom";
+import React from "react";
 
-const Layout = () => {
+const Layout =  React.memo(() => {
   return (
     <div className="">
       <Header />
@@ -10,6 +11,6 @@ const Layout = () => {
       <Footer />
     </div>
   );
-};
+});
 
 export default Layout;
