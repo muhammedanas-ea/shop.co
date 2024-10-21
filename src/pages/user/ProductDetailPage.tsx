@@ -5,7 +5,7 @@ import { FaMinus, FaPlus } from "react-icons/fa6";
 import ProductList from "../../components/user/home/productList/ProductList";
 import ProductSection from "../../components/user/productDeatils/productSection/ProductSection";
 import Typography from "../../components/user/common/typography/Typography";
-import { productDetailBreadcrumbItems } from "../../constants/breadcrumbItems";
+import { productDetailBreadcrumbItems } from "../../constants/user/breadcrumbItems";
 
 const products = [
   {

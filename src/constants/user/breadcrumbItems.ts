@@ -1,4 +1,4 @@
-import { USER_ROUTES } from "./routes";
+import { USER_ROUTES } from "../routes";
 
 export const productDetailBreadcrumbItems = [
   { text: "Home", url: USER_ROUTES.HOME },

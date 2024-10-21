@@ -2,9 +2,9 @@ import { Suspense, useState, lazy } from "react";
 import Filter from "../../components/user/category/filter/Filter";
 import Breadcrumb from "../../components/user/common/breadcrumbs/Breadcrumb";
 import { BsFilter } from "react-icons/bs";
-import useProducts from "../../hooks/useProducts";
+import useProducts from "../../hooks/user/useProducts";
 import ProductCardSkeleton from "../../components/user/common/productcard/ProductCardSkelton";
-import { categoryBreadcrumbItems } from "../../constants/breadcrumbItems";
+import { categoryBreadcrumbItems } from "../../constants/user/breadcrumbItems";
 
 const ProductCard = lazy(() => import("../../components/user/common/productcard/ProductCard"));
 

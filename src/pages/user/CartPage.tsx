@@ -3,7 +3,7 @@ import Typography from "../../components/user/common/typography/Typography";
 import CartItem from "../../components/user/cart/cartiteam/CartIteam";
 import OrderSummary from "../../components/user/cart/ordersummary/OrderSummary";
 import productImg1 from "../../assets/productImg/image 8 (1).png";
-import { cartBreadcrumbItems } from "../../constants/breadcrumbItems";
+import { cartBreadcrumbItems } from "../../constants/user/breadcrumbItems";
 
 const CartPage = () => {
   const cartItems = [

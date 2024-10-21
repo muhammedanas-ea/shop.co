@@ -34,7 +34,7 @@ const Header = () => {
           <h1 className="text-2xl font-bold admin-font">Shop.co</h1>
         </div>
       </div>
-      <div className="flex space-x-5 items-center">
+      <div className="flex space-x-5 items-center cursor-pointer ">
         <div>
           <IoMdNotificationsOutline size={24} color="#111827" />
         </div>
