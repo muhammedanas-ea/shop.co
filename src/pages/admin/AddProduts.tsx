@@ -4,13 +4,13 @@ import { IoIosArrowRoundBack } from "react-icons/io";
 import { Link } from "react-router-dom";
 
 const AddProducts = () => {
-  const [images, setImages] = useState([]);
+  const [images, setImages] = useState<string[]>([]);
 
   // Handle image upload and validation
-  const handleImageUpload = (event:string) => {
-    const files = Array.from(event.target.files);
+  const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const files = event.target.files ? Array.from(event.target.files) : [];
 
-    if (files) {
+    if (files.length) {
       const newImageURLs = files.map((file) => URL.createObjectURL(file));
       setImages((prevImages) => [...prevImages, ...newImageURLs]);
     }
@@ -39,7 +39,7 @@ const AddProducts = () => {
           </h1>
           <div className="flex flex-col mt-5">
             <label className="text-sm admin-font" htmlFor="product-name">
-              Name Product
+              Product Name
             </label>
             <input
               className="rounded-lg bg-gray-200 border-none mt-1"
@@ -49,7 +49,7 @@ const AddProducts = () => {
           </div>
           <div className="flex flex-col mt-4">
             <label className="text-sm admin-font" htmlFor="product-description">
-              Description Product
+              Product Description
             </label>
             <textarea
               className="rounded-lg bg-gray-200 border-none mt-1 h-32"
@@ -61,7 +61,7 @@ const AddProducts = () => {
             <p className="text-xs text-gray-500">Pick Available Size</p>
             <div className="flex flex-row mt-3 space-x-3">
               {/* Size Options */}
-              {["XS", "S", "M", "XL", "XXL"].map((size) => (
+              {["XS", "S", "M", "L", "XL", "XXL"].map((size) => (
                 <div
                   key={size}
                   className="flex items-center justify-center w-12 h-12 bg-gray-200 rounded-lg shadow-sm cursor-pointer hover:bg-green-300 active:bg-green-300 transition duration-150 ease-in-out"
@@ -74,7 +74,7 @@ const AddProducts = () => {
         </div>
         <div className="bg-white p-4 rounded-lg border">
           <h1 className="font-medium text-lg text-gray-900 tracking-tight admin-font">
-            Upload Img
+            Upload Image
           </h1>
           <div className="flex flex-col-reverse gap-3 w-full mt-5">
             {/* Thumbnail Images */}
@@ -117,39 +117,37 @@ const AddProducts = () => {
               aria-label="Main Product Image"
             >
               {images[0] ? (
-                <>
-                  <img
-                    src={images[0]}
-                    alt="Main Product"
-                    className="w-full h-full object-cover rounded-lg"
-                  />
-                </>
+                <img
+                  src={images[0]}
+                  alt="Main Product"
+                  className="w-full h-full object-cover rounded-lg"
+                />
               ) : null}
             </div>
           </div>
         </div>
         <div className="bg-white p-4 rounded-lg border">
           <h1 className="font-medium text-lg text-gray-900 tracking-tight admin-font">
-            Pricing and stock
+            Pricing and Stock
           </h1>
           <div className="flex flex-col mt-5">
-            <label className="text-sm admin-font" htmlFor="product-name">
-              price
+            <label className="text-sm admin-font" htmlFor="product-price">
+              Price
             </label>
             <input
               className="rounded-lg bg-gray-200 border-none mt-1"
               type="text"
-              id="product-name"
+              id="product-price"
             />
           </div>
           <div className="flex flex-col mt-5">
-            <label className="text-sm admin-font" htmlFor="product-name">
-              stock
+            <label className="text-sm admin-font" htmlFor="product-stock">
+              Stock
             </label>
             <input
               className="rounded-lg bg-gray-200 border-none mt-1"
               type="text"
-              id="product-name"
+              id="product-stock"
             />
           </div>
         </div>
@@ -158,48 +156,13 @@ const AddProducts = () => {
             Category
           </h1>
           <div className="flex flex-col mt-5">
-            <label className="text-sm admin-font" htmlFor="product-name">
-              Name Product
+            <label className="text-sm admin-font" htmlFor="product-category">
+              Product Category
             </label>
             <input
               className="rounded-lg bg-gray-200 border-none mt-1"
               type="text"
-              id="product-name"
-            />
-          </div>
-          <div className="flex flex-col mt-5">
-            <label className="text-sm admin-font" htmlFor="product-name">
-              Name Product
-            </label>
-            <input
-              className="rounded-lg bg-gray-200 border-none mt-1"
-              type="text"
-              id="product-name"
-            />
-          </div>
-        </div>
-        <div className="bg-white p-4 rounded-lg border">
-          <h1 className="font-medium text-lg text-gray-900 tracking-tight admin-font">
-            General information
-          </h1>
-          <div className="flex flex-col mt-5">
-            <label className="text-sm admin-font" htmlFor="product-name">
-              Name Product
-            </label>
-            <input
-              className="rounded-lg bg-gray-200 border-none mt-1"
-              type="text"
-              id="product-name"
-            />
-          </div>
-          <div className="flex flex-col mt-5">
-            <label className="text-sm admin-font" htmlFor="product-name">
-              Name Product
-            </label>
-            <input
-              className="rounded-lg bg-gray-200 border-none mt-1"
-              type="text"
-              id="product-name"
+              id="product-category"
             />
           </div>
         </div>
